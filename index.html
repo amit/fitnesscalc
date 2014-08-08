@@ -79,7 +79,7 @@ $(document).ready(function(){
 <option value="244">8ft 0in (244cm)</option>
 </select>
 <h1>Tab based way for presenting different calculators.</h1>
-<div id="tab"><ul><li><a href="#pft" ><span>Personal Fitness Test</span></a></li><li><a href="#pft" ><span>Basal Metabolic Rate</span></a></li><li><a href="#rmr" ><span>Resting Metabolic Rate</span></a></li><li><a href="#bmi" ><span>Body Mass Index</span></a></li><li><a href="#dcb" ><span>Daily Calories Burned</span></a></li><li><a href="#mhr" ><span>Maximum Heart Rate</span></a></li><li><a href="#cbr" ><span>Calorie Burn Calculator</span></a></li><li><a href="#vo2max" ><span>V02max</span></a></li><li><a href="#cbra" ><span>Calories Burned by Activity</span></a></li></ul><div<br />
+<div id="tab"><ul><li><a href="#pft" ><span>Personal Fitness Test</span></a></li><li><a href="#bmr" ><span>Basal Metabolic Rate</span></a></li><li><a href="#rmr" ><span>Resting Metabolic Rate</span></a></li><li><a href="#bmi" ><span>Body Mass Index</span></a></li><li><a href="#dcb" ><span>Daily Calories Burned</span></a></li><li><a href="#mhr" ><span>Maximum Heart Rate</span></a></li><li><a href="#cbr" ><span>Calorie Burn Calculator</span></a></li><li><a href="#vo2max" ><span>V02max</span></a></li><li><a href="#cbra" ><span>Calories Burned by Activity</span></a></li></ul><div<br />
 <div id="pft">
 <h2> Calculate your Personal Fitness Test Score! </h2>
 <p><aside class="box notice_box"><table><tbody><tr><td>&nbsp;</td><td>Use this calculator to calculate your PFT (Personal Fitness Test) score. <p/><p>This score is the combination of scores for 1.5 mile run time, number of pushups and number of sit-ups you can do in 2 minutes.</td></tr></tbody></table></aside>
@@ -96,20 +96,20 @@ Sit Ups Score:  <strong data-bind="text:situpscore"></strong></p>
 
 <p>Your overall PFT score is: <strong data-bind="text:pft"></strong></p>
 </div>
-<div id="bmr"><br />
+<div id="bmr">
 <h2>Basal Metabolic Rate</h2>
 <p><aside class="box notice_box"><table><tbody><tr><td>&nbsp;</td><td>Use this calculator to estimate your Basal Metabolic Rate (BMR). This is the amount of calories that you burn while you are at complete rest and not digesting any food.</td></tr></tbody></table></aside>
 <p>Your BMR is: <strong data-bind="text:bmr"></strong></p>
-</div><div id="rmr"><br />
+</div><div id="rmr">
 <h2>Resting Metabolic Rate</h2>
 <p><aside class="box notice_box"><table><tbody><tr><td>&nbsp;</td><td>Use this calculator to estimate your Resting Metabolic Rate (RMR). This is the amount of calories that you burn while you are at complete rest but still digesting food.<br />
 </td></tr></tbody></table></aside>
 <p>Your RMR is: <strong data-bind="text:rmr"></strong></p>
-</div><div id="bmi"><br />
+</div><div id="bmi">
 <h2>Body Mass Index</h2>
 <p><aside class="box notice_box"><table><tbody><tr><td>&nbsp;</td><td>Use this calculator to find out what your body mass index (BMI) is.</td></tr></tbody></table></aside>
 <p>Your BMI is: <strong data-bind="text:bmi"></strong></p>
-</div><br />
+</div>
 <div id="dcb">
 <h2>Daily Calories Burned Calculator</h2>
 <p><aside class="box notice_box"><table><tbody><tr><td>&nbsp;</td><td>Use this calculator to estimate the total amount of calories that you burn during an average day.</td></tr></tbody></table></aside>
@@ -122,13 +122,13 @@ Sit Ups Score:  <strong data-bind="text:situpscore"></strong></p>
 </select>
 <p>Your Daily Calories Burned is: <strong data-bind="text:dcb"></strong></p>
 </div>
-<div id="mhr"><br />
+<div id="mhr">
 <h2>Maximum Heart Rate</h2>
 <p><aside class="box notice_box"><table><tbody><tr><td>&nbsp;</td><td>Use this calculator to estimate your maximum heart rate.<br />
 </td></tr></tbody></table></aside>
 <p>Classic: Your maximum heart rate is: <strong data-bind="text:maxhr"></strong> beats/minute.<br />
    Tanaka: Your maximum heart rate is <strong data-bind="text:maxhrtanaka"></strong> beats/minute.</p>
-</div><br />
+</div>
 <div id="cbr">
 <h2>Calculate Your Calories Burned by Heart Rate</h2>
 <p><aside class="box notice_box"><table><tbody><tr><td>&nbsp;</td><td>This calculator provides an estimate of calories burn during exercise based on your heart rate<br />
@@ -136,9 +136,9 @@ Sit Ups Score:  <strong data-bind="text:situpscore"></strong></p>
 <p><strong>Activity Duration: </strong><div style="margin: 10px" data-bind="slider: act_duration, sliderOptions: {min: 0, max: 7200, range: 'min', step: 1}"></div></p>
 <p>(<strong data-bind="text:act_min"> </strong> minutes and <strong data-bind="text:act_sec"></strong> seconds.)</p>
 <p>Average Heart Rate: <input size="3" data-bind="value:avg_hr" type="text"/></p>
-<p>At <strong data-bind="text:avg_hr_percent"></strong> % of estimated maximum heart rate (<strong data-bind="text: maxhrtanaka"></strong>), your calorie burn is an estimated <strong data-bind="text: calorieburnrate"></strong> calories per hour. You will burn <strong data-bind="text:totalcals"></strong> total calories in <span data-bind="text:act_min"></span> minutes and <span data-bind="text:act_sec"></span> seconds.</p>
+<p>At <strong data-bind="text:avg_hr_percent"></strong> % of estimated maximum heart rate (<strong data-bind="text: maxhrtanaka"></strong>), your calorie burn is an estimated <strong data-bind="text: calorieburnrate"></strong> calories per hour.</p><p> You will burn <strong data-bind="text:totalcals"></strong> total calories in <span data-bind="text:act_min"></span> minutes and <span data-bind="text:act_sec"></span> seconds.</p>
 <p>  </div>
-<div id="vo2max"><br />
+<div id="vo2max">
 <h2>Calculate Your V02max</h2>
 <p><aside class="box notice_box"><table><tbody><tr><td>&nbsp;</td><td>This page actually has four separate VO2max calculators that are able to estimate your VO2max based on your resting heart rate or performance of a variety of physical exertion tests.<br />
 </td></tr></tbody></table></aside>
@@ -282,7 +282,7 @@ The table below shows the standard VO2max ranges for both men and women:
 
 
 </div>
-<div id="cbra"><br />
+<div id="cbra">
 <h2>Calculate Your Calories Burned by Activity</h2>
 <p><aside class="box notice_box"><table><tbody><tr><td>&nbsp;</td><td>This calculator provides an estimation of calorie burn for over 600 different activities.<br />
 </td></tr></tbody></table></aside>
