@@ -493,6 +493,21 @@ function AppViewModel() {
      bmi = self.kgweight() / (self.height() * self.height()/10000);
     return bmi.toFixed(1);
    });
+   self.bmicat = ko.computed(function() {
+      var bmi = self.bmi();
+      if (bmi < 18.5){
+        return "Underweight";
+      }
+      if ((bmi >= 18.5) && (bmi < 25)) {
+        return "Normal weight";
+      }
+      if ((bmi >= 25) && (bmi < 30)) {
+        return "Overweight";
+      }
+      if (bmi >= 30) {
+        return "Obesity";
+      }
+   });
   self.dcb = ko.computed(function() {
     var dcb=0;
     dcb = Math.round(self.activitylevelfactor()*self.bmr());
