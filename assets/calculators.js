@@ -509,6 +509,7 @@ function AppViewModel() {
     }
     return 'red';
   });
+
   self.dcb = ko.computed(function() {
     var dcb=0;
     dcb = Math.round(self.activitylevelfactor()*self.bmr());
