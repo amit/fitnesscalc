@@ -493,6 +493,22 @@ function AppViewModel() {
      bmi = self.kgweight() / (self.height() * self.height()/10000);
     return bmi.toFixed(1);
    });
+
+  self.bmiStatus = ko.computed(function() {
+    if (self.bmi() < 18.5) {
+      return 'blue';
+    }
+    if (self.bmi() < 25) {
+      return 'green';
+    }
+    if (self.bmi() < 30) {
+      return 'yellow';
+    }
+    if (self.bmi() < 35) {
+      return 'orange';
+    }
+    return 'red';
+  });
   self.dcb = ko.computed(function() {
     var dcb=0;
     dcb = Math.round(self.activitylevelfactor()*self.bmr());

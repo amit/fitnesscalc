@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Fitness Calculators</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js" integrity="sha512-vs7+jbztHoMto5Yd/yinM4/y2DOkPLt0fATcN+j+G4ANY2z4faIzZIOMkpBmWdcxt+596FemCh9M18NUJTZwvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="calculators.js"></script>
+    <script type="text/javascript" src="assets/calculators.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/pepper-grinder/jquery-ui.min.css" integrity="sha512-0XBnOvRsajSm8bnk/1fF1Cif0GcuA5L2XQAj4K9h3ZQPDsRnQuKYvdqWrz/DdEsvq24zqOeR34a+mEzGokRGhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  p.blue {
+    background-color: lightblue;
+  }
+  p.green {
+    background-color: lightgreen;
+  }
+  p.yellow {
+    background-color: yellow;
+  }
+  p.orange {
+    background-color: orange;
+  }
+  p.red {
+    background-color: red;
+  }
+
+</style>
     <script type="text/javascript">
 $(document).ready(function(){
   $("#accordion").accordion();
@@ -103,7 +122,8 @@ Sit Ups Score:  <strong data-bind="text:situpscore"></strong></p>
 </div><div id="bmi">
 <h2>Body Mass Index</h2>
 <p><aside class="box notice_box"><table><tbody><tr><td>&nbsp;</td><td>Use this calculator to find out what your body mass index (BMI) is.</td></tr></tbody></table></aside>
-<p>Your BMI is: <strong data-bind="text:bmi"></strong></p>
+<p data-bind="class: bmiStatus">Your BMI is: <strong data-bind="text:bmi"></strong></p>
+<img src="assets/bmi-adult-fb-600x315.jpeg"/>
 </div>
 <div id="dcb">
 <h2>Daily Calories Burned Calculator</h2>
