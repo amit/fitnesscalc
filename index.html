@@ -26,12 +26,16 @@
   }
 
 </style>
-    <script type="text/javascript">
-$(document).ready(function(){
-  $("#accordion").accordion();
-  $("#tab").tabs();
-});
-    </script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#accordion").accordion();
+    $("#tab").tabs({
+      activate: function(event, ui) { 
+        history.pushState(null, null, '#' + ui.newPanel.attr('id'));
+      }
+    });
+  });
+</script>
 </head>
 <body>
 <section id="content"><div class="entry"><div class="entry-content"><h1>Fitness Calculators</h1>
